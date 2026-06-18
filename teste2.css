@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+   
+    background: radial-gradient(circle, #1a0505 0%, #0a0a0a 100%);
+    background-attachment: fixed;
+    color: #e0e0e0; 
+    font-family: Arial, sans-serif;
+}
+nav.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 2px solid #800000; 
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+.logo{
+    color: #ff3333; 
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+}
+
+
+.cursor {
+    color: #ff3333;
+    animation: piscar 0.8s infinite;
+    font-weight: normal;
+}
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.efeito-corte {
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff1a1a, white, #ff1a1a, transparent);
+    box-shadow: 0 0 10px #ff0000;
+    pointer-events: none; /* Não atrapalha os cliques reais */
+    z-index: 9999;
+    animation: desvanecerCorte 0.4s ease-out forwards;
+}
+
+.menu{
+    display: flex;
+    gap: 35px;
+}
+.menu a{
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.menu a:hover{
+    color: #ff3333;
+    text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+}
+main{
+    padding-top: 120px;
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff1a1a;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+h3{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ff3333;
+    font-size: 26px;
+}
+h4{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ff1a1a;
+    font-size: 22px;
+}
+h5{
+    text-align: left;
+    font-size: 19px;
+    margin: 20px 0 10px 0;
+    color: #b3b3b3;
+}
+p{
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #cccccc;
+}
+section,
+.sub-hobby, .habilidades, .experiencias{
+    padding: 20px 60px;
+}
+.hobbs {
+    margin-bottom: 20px;
+}
+.hobbs a {
+    color: #ff4d4d;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.hobbs a:hover {
+    color: white;
+    text-shadow: 0 0 5px #ff1a1a;
+}
+details{
+    background: rgba(128, 0, 0, 0.1); /* Fundo com tom vermelho bem sutil */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 51, 51, 0.15);
+    transition: 0.3s;
+}
+details:hover {
+    border-color: rgba(255, 51, 51, 0.4);
+    background: rgba(128, 0, 0, 0.15);
+}
+summary{
+    cursor: pointer;
+    font-weight: bold;
+    color: #e6e6e6;
+    transition: 0.2s;
+}
+summary:hover {
+    color: #ff3333;
+}
+
+
+.jogos-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+.jogos-galeria img{
+    border-radius: 10px;
+    transition: 0.3s;
+    object-fit: cover;
+    border: 1px solid #331111;
+}
+.jogos-galeria img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff1a1a; 
+    border-color: #ff1a1a;
+}
+
+
+.projetos-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.projeto{
+    background: #140d0d; 
+    border: 2px solid #4a0d0d; 
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.projeto:hover{
+    transform: translateY(-5px);
+    border-color: #ff1a1a;
+    box-shadow: 0 0 20px rgba(255, 26, 26, 0.3); 
+}
+.projeto h3 {
+    margin-top: 0;
+    color: #e6e6e6;
+    font-size: 20px;
+}
+.projeto button {
+    background: #800000;
+    color: white;
+    border: 1px solid #ff1a1a;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+.projeto button:hover {
+    background: #ff1a1a;
+    box-shadow: 0 0 10px rgba(255, 26, 26, 0.6);
+}
+
+
+footer{
+    background: #070505;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 3px solid #ff1a1a;
+    margin-top: 50px;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.9);
+}
+footer h2{
+    color: #ff3333;
+    margin-bottom: 15px;
+}
+footer p{
+    color: #b3b3b3;
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}
+.contato-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+}
+.contato-item img{
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 0 2px rgba(255, 26, 26, 0.4)); 
+}
+.contato-item span {
+    color: #e0e0e0;
+}
+.contato-item a{
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contato-item a:hover{
+    color: white;
+    text-shadow: 0 0 5px #ff1a1a;
+}
+.footer-bottom{
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #261414;
+    color: #736666;
+}
+
+
+.hidden-element {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+.show-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media(max-width: 768px){
+    nav.navbar{
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        position: static;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    main {
+        padding-top: 20px;
+    }
+    .projetos-container {
+        grid-template-columns: 1fr;
+    }
+    section, .sub-hobby, .habilidades, .experiencias{
+        padding: 20px;
+    }
+    .jogos-galeria {
+        justify-content: center;
+    }
+}
