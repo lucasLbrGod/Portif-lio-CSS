@@ -27,7 +27,6 @@ function typeWriter() {
     }
 }
 
-// Inicializa o efeito de digitação ao carregar a página
 window.addEventListener("DOMContentLoaded", typeWriter);
 
 
@@ -53,7 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
     
     cards.forEach(card => {
         card.addEventListener('mousemove', () => {
-            // Intensifica a aura de energia vermelha ao redor da Expansão de Domínio
+            
             card.style.boxShadow = "0 0 25px rgba(255, 26, 26, 0.6)";
             card.style.borderColor = "#ff1a1a";
         });
